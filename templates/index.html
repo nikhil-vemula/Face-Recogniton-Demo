@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Face Recognition Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+</style>
+<body>
+
+<div class="container-fluid">
+<div class="jumbotron text-center">
+    <h2>Face Recognition Demo</h2>
+</div>
+<p>Currently trained faces: {{ faces|length }}</p>
+    <ul>
+    {% for face in faces %}
+        <li>{{face}}</li>
+    {% endfor %}
+    </ul>
+<p>
+<a href="/train_page">Train</a><br>
+Train the model with with single image of the person you want to recognize
+</p>
+<p>
+<a href="/test_page">Test</a><br>
+Test the model with a new image of that person
+</p>
+
+
+
+</body>
+</html>

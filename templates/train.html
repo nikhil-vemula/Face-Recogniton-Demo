@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Face Recognition Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+</style>
+<body>
+
+
+<div id="demo">
+<p>Select the images to train the model</p>
+<form action = "http://localhost:5000/train" method = "POST" enctype = "multipart/form-data">
+    <p><b>Multiple files can be choosen</b></p>
+    <input type = "file" name = "file" multiple><br>
+    <input type = "submit" onclick="yo()"/>
+</form>
+</div>
+<div id="loading" style="display:none">
+    <h3>Training the model please wait...</h3>
+</div>
+<script>
+    function yo(){
+        document.getElementById("demo").style.display = 'none'
+        document.getElementById("loading").style.display = 'block'
+    }
+</script>
+
+
+</body>
+</html>
